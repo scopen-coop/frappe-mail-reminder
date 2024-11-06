@@ -1,4 +1,4 @@
-app_name = "mail_reminder"
+app_name = "mail_reminderr"
 app_title = "Mail Reminder"
 app_publisher = "Scopen"
 app_description = "Mail reminder application"
@@ -241,4 +241,3 @@ app_license = "gpl-3.0"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
