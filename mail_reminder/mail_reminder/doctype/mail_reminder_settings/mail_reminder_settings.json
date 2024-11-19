@@ -1,0 +1,42 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-06 14:17:29.854979",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "mail_reminder"
+ ],
+ "fields": [
+  {
+   "fieldname": "mail_reminder",
+   "fieldtype": "Table",
+   "label": "Mail Reminder",
+   "options": "Mail Reminder Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-11-06 15:57:52.353307",
+ "modified_by": "Administrator",
+ "module": "Mail Reminder",
+ "name": "Mail Reminder Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

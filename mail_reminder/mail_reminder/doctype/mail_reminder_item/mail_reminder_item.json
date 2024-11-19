@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-06 14:26:57.280587",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "document",
+  "mail_model",
+  "time_between_reminders",
+  "mail_account_sender"
+ ],
+ "fields": [
+  {
+   "fieldname": "document",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Document",
+   "link_filters": "[[\"DocType\",\"name\",\"in\",[\"Supplier Quotation\",\"Purchase Order\",\"Sales Order\",\"Sales Invoice\"]]]",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "mail_model",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Mail Model",
+   "options": "Email Template",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time_between_reminders",
+   "fieldtype": "Duration",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Time Between Reminders",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mail_account_sender",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Mail Account Sender",
+   "options": "Email Account",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-18 12:26:03.250783",
+ "modified_by": "Administrator",
+ "module": "Mail Reminder",
+ "name": "Mail Reminder Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

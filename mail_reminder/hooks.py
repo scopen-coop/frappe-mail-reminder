@@ -1,9 +1,52 @@
-app_name = "mail_reminderr"
+app_name = "mail_reminder"
 app_title = "Mail Reminder"
 app_publisher = "Scopen"
 app_description = "Mail reminder application"
 app_email = "scopen@scopen.com"
 app_license = "gpl-3.0"
+
+fixtures = [
+    {
+        "dt": "Custom Field",
+        "filters": [
+            [
+                "name",
+                "in",
+                (
+                    "Customer-automatic_mail_reminder",
+                    "Purchase Order-section_break_vxxkz",
+                    "Purchase Order-automatic_mail_dunning",
+                    "Purchase Order-last_automatic_mail_dunning_date",
+                    "Sales Invoice-section_break_11c8n",
+                    "Sales Invoice-automatic_mail_dunning",
+                    "Sales Invoice-last_automatic_mail_dunning_date",
+                    "Sales Order-section_break_rkngy",
+                    "Sales Order-automatic_mail_dunning",
+                    "Sales Order-last_automatic_mail_dunning_date",
+                    "Supplier-automatic_mail_reminder",
+                    "Supplier Quotation-automatic_mail_dunning",
+                    "Supplier Quotation-last_automatic_mail_dunning_date",
+                    "Supplier Quotation-section_break_rzuok",
+                ),
+            ],
+        ],
+    },
+    {
+        "dt": "Client Script",
+        "filters": [
+            [
+                "name",
+                "in",
+                (
+                    "Purchase order default automatic mail dunning value",
+                    "Supplier quotation default automatic mail dunning value",
+                    "Sales order default automatic mail dunning value",
+                    "Sales invoice default automatic mail dunning value",
+                ),
+            ],
+        ],
+    },
+]
 
 # Apps
 # ------------------
@@ -130,7 +173,7 @@ app_license = "gpl-3.0"
 # Override standard doctype classes
 
 # override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
+# 	"ToDo": "app.overrides.CustomToDo"
 # }
 
 # Document Events
@@ -148,23 +191,26 @@ app_license = "gpl-3.0"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"mail_reminder.tasks.all"
-# 	],
-# 	"daily": [
-# 		"mail_reminder.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"mail_reminder.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"mail_reminder.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"mail_reminder.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+    # "cron": {
+    #     "* * * * *": [
+    # 	    "mail_reminder.tasks.cron"
+    #     ]
+    # },
+    # "all": [
+    # 	"mail_reminder.tasks.all"
+    # ],
+    "daily": ["mail_reminder.tasks.cron"],
+    # "hourly": [
+    # 	"mail_reminder.tasks.hourly"
+    # ],
+    # "weekly": [
+    # 	"mail_reminder.tasks.weekly"
+    # ],
+    # "monthly": [
+    # 	"mail_reminder.tasks.monthly"
+    # ],
+}
 
 # Testing
 # -------
