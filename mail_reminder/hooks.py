@@ -192,24 +192,7 @@ fixtures = [
 # ---------------
 
 scheduler_events = {
-    # "cron": {
-    #     "* * * * *": [
-    # 	    "mail_reminder.tasks.cron"
-    #     ]
-    # },
-    # "all": [
-    # 	"mail_reminder.tasks.all"
-    # ],
-    "daily": ["mail_reminder.tasks.cron"],
-    # "hourly": [
-    # 	"mail_reminder.tasks.hourly"
-    # ],
-    # "weekly": [
-    # 	"mail_reminder.tasks.weekly"
-    # ],
-    # "monthly": [
-    # 	"mail_reminder.tasks.monthly"
-    # ],
+    "daily": ["mail_reminder.tasks.mail_reminder"],
 }
 
 # Testing
