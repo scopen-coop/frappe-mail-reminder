@@ -60,7 +60,7 @@ def mail_reminder():
             template = get_email_template(mail_model, current_doc)
 
             frappe.sendmail(
-                recipients=["yannishoareau26@gmail.com"],
+                recipients=[current_doc.contact_email],
                 sender=mail_account_sender,
                 subject=template["subject"],
                 message=template["message"],
