@@ -25,8 +25,7 @@ def mail_reminder():
         related_documents[item.document] = frappe.get_all(
             item.document,
             fields=["*"],
-            # filters={"automatic_mail_dunning": True, "docstatus": 2}, #TODO : replace filters with this line when test finished
-            filters={"automatic_mail_dunning": True},
+            filters={"automatic_mail_dunning": True, "docstatus": 1},
         )
 
     for key in related_documents:
