@@ -1,0 +1,45 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"NO5yYHJopc\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Mail reminder Settings<br></b></span>\",\"col\":12}},{\"id\":\"jjxI_PDawD\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Mail reminder Settings\",\"col\":3}}]",
+ "creation": "2024-12-16 21:32:11.580409",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "setting",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Mail Reminder",
+ "links": [],
+ "modified": "2024-12-16 21:34:55.615663",
+ "modified_by": "Administrator",
+ "module": "Mail Reminder",
+ "name": "Mail Reminder",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "ERPNext Settings",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 19.1,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Mail reminder Settings",
+   "link_to": "Mail Reminder Settings",
+   "type": "DocType"
+  }
+ ],
+ "title": "Mail Reminder"
+}
