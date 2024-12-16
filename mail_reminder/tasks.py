@@ -2,6 +2,7 @@ import frappe
 
 from datetime import timedelta
 from frappe import _
+from frappe.core.doctype.communication.email import _make as make_communication
 from frappe.email.doctype.email_template.email_template import get_email_template
 from frappe.utils import date_diff, nowdate, now
 
@@ -59,24 +60,27 @@ def mail_reminder():
 
             template = get_email_template(mail_model, current_doc)
 
+            communication = make_communication(
+                doctype=key,
+                name=current_doc.name,
+                content=template["message"],
+                subject=template["subject"],
+                sender=mail_account_sender,
+                recipients=[current_doc.contact_email],
+                communication_medium="Email",
+                send_email=False,
+                communication_type="Automated Message",
+            ).get("name")
+
             frappe.sendmail(
                 recipients=[current_doc.contact_email],
                 sender=mail_account_sender,
                 subject=template["subject"],
                 message=template["message"],
+                reference_doctype=key,
+                reference_name=current_doc.name,
+                communication=communication,
             )
-
-            frappe.get_doc(key, current_doc.name).add_comment(
-                "Label",
-                _("sent a reminder to {0} via {1}").format(
-                    current_doc.contact_display, current_doc.contact_email
-                ),
-            )
-
-            # TODO : determine which one is the best
-            # doc.add_comment("Comment", "text comment", "comment@comment.fr", "by Comment")
-            # doc.add_comment("Workflow", "text workflow", "workflow@workflow.fr", "by workflow")
-            # doc.add_comment("Attachment", "text attachment", "attachment@attachment.fr", "by attachment")
 
             frappe.db.set_value(
                 key, current_doc.name, "last_automatic_mail_dunning_date", now()
