@@ -28,14 +28,14 @@ frappe.ui.form.on("Mail Reminder Settings", {
 });
 
 frappe.ui.form.on("Mail Reminder Item", "document", function (frm, cdt, cdn) {
-  let rowdt = frappe.get_doc(cdt, cdn);
-  for (let rowgrid of frm.fields_dict["mail_reminder"].grid.grid_rows) {
-    if (rowgrid.doc.idx == rowdt.idx) {
-      let statusfield = rowgrid?.docfields?.find(
+  let row_dt = frappe.get_doc(cdt, cdn);
+  for (let row_grid of frm.fields_dict["mail_reminder"].grid.grid_rows) {
+    if (row_grid.doc.idx === row_dt.idx) {
+      let status_field = row_grid?.docfields?.find(
         (d) => d.fieldname === "status"
       );
-      statusfield["options"] = available_status[rowdt.document];
-      refresh_field("mail_reminder", rowdt.name);
+      status_field["options"] = available_status[row_dt.document];
+      refresh_field("mail_reminder", row_dt.name);
     }
   }
 });

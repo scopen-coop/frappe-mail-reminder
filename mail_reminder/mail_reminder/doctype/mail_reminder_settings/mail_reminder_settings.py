@@ -2,6 +2,7 @@
 # For license information, please see license.txt
 
 import frappe
+from frappe import _
 from frappe.model.document import Document
 
 
@@ -27,9 +28,18 @@ def get_available_status_per_doctype():
         "Sales Invoice",
     ]:
         if frappe.get_meta(doctype).has_field("status"):
-            status_available[doctype] = (
+            for status in (
                 frappe.get_meta(doctype).get_field("status").options.split("\n")
-            )
+            ):
+                if status != "" and status != "Draft":
+                    if doctype in status_available:
+                        status_available[doctype].append(
+                            {"value": status, "description": _(status)}
+                        )
+                    else:
+                        status_available[doctype] = [
+                            {"value": status, "description": _(status)}
+                        ]
 
     if status_available:
         return status_available

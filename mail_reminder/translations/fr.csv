@@ -1,3 +1,6 @@
 Mail Reminder,Relance par email automatique
 Automatic Mail Reminder,Envoi automatique des relances
 Last Automatic Mail Dunning Date,Date de la dernière relance email automatique
+Time Between Reminders, Durée entre deux relances
+Mail Account Sender,Compte Email utilisé pour les relances
+Mail Reminder Settings,Configuration relance par email automatique
