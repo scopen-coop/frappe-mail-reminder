@@ -1,10 +1,10 @@
-import frappe
-
 from datetime import timedelta
+
+import frappe
 from frappe import _
 from frappe.core.doctype.communication.email import _make as make_communication
 from frappe.email.doctype.email_template.email_template import get_email_template
-from frappe.utils import date_diff, nowdate, now
+from frappe.utils import date_diff, now, nowdate
 
 
 def mail_reminder():
@@ -25,7 +25,11 @@ def mail_reminder():
         related_documents[item.document] = frappe.get_all(
             item.document,
             fields=["*"],
-            filters={"automatic_mail_dunning": True, "docstatus": 1},
+            filters={
+                "automatic_mail_dunning": True,
+                "docstatus": 1,
+                "status": item.status,
+            },
         )
 
     for key in related_documents:
