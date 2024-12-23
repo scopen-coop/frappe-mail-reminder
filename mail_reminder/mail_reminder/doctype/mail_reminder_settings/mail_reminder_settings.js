@@ -29,13 +29,12 @@ frappe.ui.form.on("Mail Reminder Settings", {
 
 frappe.ui.form.on("Mail Reminder Item", "document", function (frm, cdt, cdn) {
   let row_dt = frappe.get_doc(cdt, cdn);
-  for (let row_grid of frm.fields_dict["mail_reminder"].grid.grid_rows) {
-    if (row_grid.doc.idx === row_dt.idx) {
-      let status_field = row_grid?.docfields?.find(
-        (d) => d.fieldname === "status"
-      );
-      status_field["options"] = available_status[row_dt.document];
-      refresh_field("mail_reminder", row_dt.name);
-    }
-  }
+  frm.set_df_property(
+    "mail_reminder",
+    "options",
+    available_status[row_dt.document],
+    frm.docname,
+    "status",
+    row_dt.name
+  );
 });

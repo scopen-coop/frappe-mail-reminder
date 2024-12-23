@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"NO5yYHJopc\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Mail reminder Settings<br></b></span>\",\"col\":12}},{\"id\":\"jjxI_PDawD\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Mail reminder Settings\",\"col\":3}}]",
+ "content": "[{\"id\":\"NO5yYHJopc\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Mail reminder Settings<br></b></span>\",\"col\":12}},{\"id\":\"NgEFa-_itP\",\"type\":\"onboarding\",\"data\":{\"onboarding_name\":\"Mail Reminder\",\"col\":12}},{\"id\":\"jjxI_PDawD\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Mail reminder Settings\",\"col\":3}}]",
  "creation": "2024-12-16 21:32:11.580409",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Mail Reminder",
  "links": [],
- "modified": "2024-12-16 21:34:55.615663",
+ "modified": "2024-12-23 12:24:58.855664",
  "modified_by": "Administrator",
  "module": "Mail Reminder",
  "name": "Mail Reminder",
@@ -29,6 +29,18 @@
   },
   {
    "role": "System Manager"
+  },
+  {
+   "role": "Sales Manager"
+  },
+  {
+   "role": "Sales Master Manager"
+  },
+  {
+   "role": "Purchase Manager"
+  },
+  {
+   "role": "Purchase Master Manager"
   }
  ],
  "sequence_id": 19.1,

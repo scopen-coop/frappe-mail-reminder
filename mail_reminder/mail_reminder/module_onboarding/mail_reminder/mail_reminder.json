@@ -1,0 +1,38 @@
+{
+ "allow_roles": [
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Sales Master Manager"
+  },
+  {
+   "role": "Sales Manager"
+  },
+  {
+   "role": "Purchase Manager"
+  },
+  {
+   "role": "Purchase Master Manager"
+  }
+ ],
+ "creation": "2024-12-23 12:11:20.188560",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "documentation_url": "https://github.com/scopen-coop/frappe-mail-reminder",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2024-12-23 12:30:13.802704",
+ "modified_by": "Administrator",
+ "module": "Mail Reminder",
+ "name": "Mail Reminder",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "step": "Create Mail reminder setup"
+  }
+ ],
+ "subtitle": "Automatic Mail Reminder",
+ "success_message": "Congratulation, you've set up your first auto reminder email ",
+ "title": "Automatic Mail Reminder"
+}
