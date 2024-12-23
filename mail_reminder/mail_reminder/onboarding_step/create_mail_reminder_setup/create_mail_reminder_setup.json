@@ -1,7 +1,7 @@
 {
  "action": "Go to Page",
  "action_label": "Create Mail reminder setup",
- "callback_message": "Congratulation, you've set up your first auto reminder email",
+ "callback_message": "You have to setup \n - the type of document in \n    - Supplier Quotation\n    - Purchase Order\n    - Sales Order\n    - Sales Invoice\n- the status of the document\n- the email template that will be used\n- the duration between two email sending \n- the Email account that will be used",
  "callback_title": "Create Mail reminder setup",
  "creation": "2024-12-23 12:10:26.119330",
  "description": "You have to setup \n - the type of document in \n    - Supplier Quotation\n    - Purchase Order\n    - Sales Order\n    - Sales Invoice\n- the status of the document\n- the email template that will be used\n- the duration between two email sending \n- the Email account that will be used",
@@ -11,7 +11,7 @@
  "is_complete": 0,
  "is_single": 1,
  "is_skipped": 0,
- "modified": "2024-12-23 12:29:56.616130",
+ "modified": "2024-12-23 12:32:00.207956",
  "modified_by": "Administrator",
  "name": "Create Mail reminder setup",
  "owner": "Administrator",
