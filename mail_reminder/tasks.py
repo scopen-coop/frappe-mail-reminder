@@ -32,6 +32,8 @@ def mail_reminder():
             },
         )
 
+    days_between_reminders = 0
+    mail_model = mail_account_sender = ""
     for key in related_documents:
         for item in set_documents_settings:
             if item.document == key:
@@ -43,6 +45,9 @@ def mail_reminder():
 
         for i in range(len(related_documents[key])):
             current_doc = related_documents[key][i]
+
+            if mail_model == "" or mail_account_sender == "":
+                continue
 
             # Testing if there is a contact on the current document and if it has an email set
             if current_doc.contact_person == "" or current_doc.contact_email == "":

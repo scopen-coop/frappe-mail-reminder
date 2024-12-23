@@ -21,7 +21,8 @@
    "in_standard_filter": 1,
    "label": "Document",
    "link_filters": "[[\"DocType\",\"name\",\"in\",[\"Supplier Quotation\",\"Purchase Order\",\"Sales Order\",\"Sales Invoice\"]]]",
-   "options": "DocType"
+   "options": "DocType",
+   "reqd": 1
   },
   {
    "fieldname": "mail_model",
@@ -56,13 +57,14 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Status"
+   "label": "Status",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-12-22 17:05:08.079048",
+ "modified": "2024-12-23 09:58:22.927828",
  "modified_by": "Administrator",
  "module": "Mail Reminder",
  "name": "Mail Reminder Item",
