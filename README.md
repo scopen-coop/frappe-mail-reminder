@@ -14,6 +14,25 @@ Example of setting Mail Reminder:
 Email Template
 ![email_template.png](img/email_template.png)
 
+### Mail template Sample
+Subject :
+```
+ [{{ company_name }} / {{ customer }}] - Payment Request Due
+ ```
+
+Body :
+```
+Dear {{ customer }},
+
+We didn't receive the payment for the sales invoice {{ name }} (amount: {{ grand_total }})
+
+Please take necessary action to proceed to payment.
+
+-- 
+This is a automatic email - do not remply
+
+```
+
 
 ### INSTALL 
 
