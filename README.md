@@ -29,7 +29,7 @@ We didn't receive the payment for the sales invoice {{ name }} (amount: {{ grand
 Please take necessary action to proceed to payment.
 
 -- 
-This is a automatic email - do not remply
+This is a automatic email - do not reply
 
 ```
 
